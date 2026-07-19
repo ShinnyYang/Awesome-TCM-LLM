@@ -1,0 +1,55 @@
+name: 推荐资源
+description: 建议新增中医/中文医疗大模型相关新闻、论文、模型或数据集
+title: "[Resource] "
+labels: ["resource"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 名称
+      placeholder: 例如 ShizhenGPT / LingLan
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - news
+        - resource (paper/model/system)
+        - dataset / benchmark
+        - Hugging Face model
+        - other
+    validations:
+      required: true
+  - type: input
+    id: year
+    attributes:
+      label: 年份
+      placeholder: "2025"
+  - type: textarea
+    id: summary
+    attributes:
+      label: 一句话摘要（中文）
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: 链接
+      description: 论文 / 代码 / 模型 / 数据集 / 新闻原文，每行一个
+      placeholder: |
+        https://arxiv.org/abs/...
+        https://github.com/...
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: 标签（可选）
+      placeholder: multimodal, benchmark, open-weights, agent
+  - type: textarea
+    id: note
+    attributes:
+      label: 备注
+      description: 与现有条目的关系、机构信息等
