@@ -19,6 +19,10 @@ CATALOG_YML = ROOT / "data" / "catalog.yml"
 CATALOG_JSON = ROOT / "data" / "catalog.json"
 README = ROOT / "README.md"
 
+SITE_ZH = "https://tyang816.github.io/zh/"
+SITE_EN = "https://tyang816.github.io/"
+DEFAULT_PORTAL = "https://tyang816.github.io/tcm/"
+
 DATASET_SECTION_ORDER = [
     "公开资料整理",
     "原始书籍 / 预训练语料",
@@ -65,9 +69,18 @@ def format_news_line(entry: dict) -> str:
     return line
 
 
+def build_site_links_block(portal: str) -> list[str]:
+    return [
+        f"**相关链接**：[中医门户]({portal}) · "
+        f"[作者中文主页]({SITE_ZH}) · [Author site (EN)]({SITE_EN})",
+        "",
+        f"> 门户支持标签筛选与搜索，数据与本 README 同源（`data/catalog.yml`）。",
+    ]
+
+
 def build_readme(catalog: dict) -> str:
     meta = catalog.get("meta") or {}
-    portal = meta.get("portal_url", "https://tyang816.github.io/tcm/")
+    portal = meta.get("portal_url", DEFAULT_PORTAL)
     lines = [
         "# 🔥 开源中文医疗大模型",
         "",
@@ -78,7 +91,7 @@ def build_readme(catalog: dict) -> str:
         "",
         "本仓库收集了开源中文医疗大模型（中医/西医）相关的资源，包括新闻、论文、模型、数据集等，欢迎大家贡献更多资源。",
         "",
-        f"> 网页浏览与筛选：[{portal}]({portal})（数据与本 README 同源）",
+        *build_site_links_block(portal),
         "",
         "## 📰 新闻",
     ]

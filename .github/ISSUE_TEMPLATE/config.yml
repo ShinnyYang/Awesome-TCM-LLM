@@ -3,3 +3,9 @@ contact_links:
   - name: 浏览网页门户
     url: https://tyang816.github.io/tcm/
     about: 筛选与搜索中医大模型资源（与 README 同源）
+  - name: 作者中文主页
+    url: https://tyang816.github.io/zh/
+    about: 个人站点中文页
+  - name: Author site (EN)
+    url: https://tyang816.github.io/
+    about: Personal site (English)

@@ -4,7 +4,9 @@
 
 本仓库收集了开源中文医疗大模型（中医/西医）相关的资源，包括新闻、论文、模型、数据集等，欢迎大家贡献更多资源。
 
-> 网页浏览与筛选：[https://tyang816.github.io/tcm/](https://tyang816.github.io/tcm/)（数据与本 README 同源）
+**相关链接**：[中医门户](https://tyang816.github.io/tcm/) · [作者中文主页](https://tyang816.github.io/zh/) · [Author site (EN)](https://tyang816.github.io/)
+
+> 门户支持标签筛选与搜索，数据与本 README 同源（`data/catalog.yml`）。
 
 ## 📰 新闻
 - [2026.06] 中科闻歌通过港交所上市聆讯；报道提及与中国中医科学院合作的**大医金匮**中医大模型已通过中国信通院最高级别可信AI认证 [[链接](https://www.ncsti.gov.cn/kjdt/xwjj/202606/t20260610_249369.html)]
